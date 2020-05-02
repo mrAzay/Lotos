@@ -1,0 +1,124 @@
+.contacts-section {
+	.container {
+		grid-template-areas:
+			"menu menu section-title phone"
+			"lotos-logo map text number-page"
+			"social social next-page next-page";
+		grid-template-columns: 10% 40% 40% 10%;
+		grid-template-rows: 10% 80% 10%;
+	}
+
+	.map {
+		grid-area: map;
+
+		.place-card .place-card-large {
+			display: none;
+		}
+
+		.gm-inset .gm-inset-hover-enabled {
+			display: none;
+		}
+
+		iframe {
+			max-width: 100%;
+			width: 100%;
+			max-height: 620px;
+			height: 100%;
+		}
+	}
+
+	.central-text {
+		margin-left: 100px;
+
+		&__address,
+		&__email {
+			font-weight: 600;
+			line-height: 30px;
+			font-family: Geometria-ExtraLight;
+			margin-bottom: 25px;
+
+			&-title {
+				font-size: 14px;
+			}
+		}
+
+		&__email {
+			margin-bottom: 35px;
+			a{
+				@include link(#000);
+			}
+		}
+
+		&__open-map,
+		&__add-view {
+			font-family: Geometria-ExtraLight;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 24px;
+			text-decoration: underline;
+			padding-left: 40px;
+			position: relative;
+			margin-bottom: 30px;
+			a{
+				@include link(#000);
+			}
+		}
+
+		&__open-map::before {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			top: calc(50% - 15px);
+			left: 0;
+			@include gradient(180);
+		}
+
+		&__open-map::after {
+			content: url(../img/location.png);
+			position: absolute;
+			left: 9px;
+			top: calc(50% - 11px);
+		}
+
+		&__add-view::before {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			top: calc(50% - 15px);
+			left: 0;
+
+			@include gradient(180);
+		}
+
+		&__add-view::after {
+			content: url(../img/envelope-small.png);
+			position: absolute;
+			left: 8px;
+			top: calc(50% - 12px);
+		}
+
+		&__copywrite {
+			font-family: Geometria-ExtraLight;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 30px;
+			margin-bottom: 60px;
+		}
+
+		&__circle {
+			@include plus(16px, 2px, #fff);
+			@include center(16px, 2px);
+		}
+	}
+
+	.next-page__button svg {
+		position: absolute;
+		top: calc(50% - 3px);
+		transform: rotate(0deg);
+		z-index: 3;
+	}
+}

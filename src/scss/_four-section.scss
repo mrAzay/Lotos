@@ -1,0 +1,47 @@
+.teacher-section {
+
+
+	.tab--active.teacher__tab::before {
+		content: 'Trainer —';
+		left: -90px;
+	}
+
+
+	.central-text {
+		&__name {
+			font-size: 48px;
+			line-height: 36px;
+			margin-bottom: 20px;
+		}
+
+		&__experience {
+			font-size: 24px;
+			line-height: 36px;
+			margin-bottom: 50px;
+		}
+
+		&__about {
+			max-width: 460px;
+			font-weight: 300;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+
+		&__button-text {
+			margin-left: 20px;
+		}
+
+		&__circle {
+			@include plus(16px, 2px, #fff);
+			@include center(16px, 2px);
+		}
+	}
+}
+
+.img-tab{
+	display: none;
+}
+
+.img-tab--active{
+	display: block;
+}

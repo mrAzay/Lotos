@@ -1,0 +1,53 @@
+$pink: #fc66a2;
+$orange: #f78e6a;
+
+
+@mixin link($link-color) {
+	color: $link-color;
+	text-decoration: none;
+}
+
+@mixin gradient-text {
+	color: #f88d6c;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin center($plus-width, $plus-hight) {
+
+	&::before {
+		top: calc(50% - #{$plus-hight / 2});
+		left: calc(50% - #{$plus-width / 2});
+	}
+
+	&::after {
+		left: calc(50% - #{$plus-hight / 2});
+		top: calc(50% - #{$plus-width / 2});
+	}
+}
+
+@mixin plus($plus-width, $plus-hight, $plus-color) {
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+	}
+
+	&::before {
+		width: $plus-width;
+		height: $plus-hight;
+		background-color: $plus-color;
+	}
+
+	&::after {
+		height: $plus-width;
+		width: $plus-hight;
+		background-color: $plus-color;
+	}
+}
+
+@mixin gradient($deg) {
+	background: $orange;
+	background: linear-gradient(#{$deg}deg, rgba(252, 102, 162, 1) 0%, rgba(247, 142, 106, 1) 70%);
+}

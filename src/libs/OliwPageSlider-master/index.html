@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Page Slider</title>
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="stylesheet" href="style.css">
+
+	<script src="wheel-indicator.js"></script>
+	<script src="oliwpageslider.js"></script>
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="page">
+			<div class="inner">
+				<h1>Oliw Page Slider</h1>
+			</div>
+		</div>
+		<div class="page">
+			<div class="inner"></div>
+		</div>
+		<div class="page">
+			<div class="inner">
+				<h2>Page with scroll</h2>
+				<div class="big-block">
+					<div class="inside-block"></div>
+				</div>
+			</div>
+		</div>
+		<div class="page">
+			<div class="inner"></div>
+		</div>
+		<div class="page">
+			<div class="inner"></div>
+		</div>
+	</div>
+	<div class="b-progress">
+		<span id="pageslider__for-text"></span>
+	</div>
+	<div class="b-console-log" id="element">Console.log(<span>no information</span>)</div>
+	<div class="b-navkey">
+		<div class="b-navkey__key" id="b-navkey__prev"> prev</div>
+		<div class="b-navkey__key" id="b-navkey__next">next </div>
+	</div>
+	<nav>
+		<ul id="pageslider__nav">
+			<li>
+				<a href="#home">1</a>
+			</li>
+			<li>
+				<a href="#second">2</a>
+			</li>
+			<li>
+				<a href="#third">3</a>
+			</li>
+			<li>
+				<a href="#fourth">4</a>
+			</li>
+			<li>
+				<a href="#last">5</a>
+			</li>
+		</ul>
+	</nav>
+
+	<a href="https://github.com/librisius/OliwPageSlider"><img
+			style="z-index: 999; position: absolute; top: 0; left: 0; border: 0;"
+			src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67"
+			alt="Fork me on GitHub"
+			data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+	<script>
+		pageslider(document.getElementById('wrap'), function () {});
+	</script>
+</body>
+
+</html>

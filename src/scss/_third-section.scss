@@ -1,0 +1,69 @@
+.form-section {
+	.central-text {
+		&__title {
+			font-size: 48px;
+			font-family: Geometria-ExtraLight;
+			font-weight: 600;
+			line-height: 55px;
+			max-width: 330px;
+			margin-bottom: 40px;
+
+			span {
+				font-size: 80px;
+				font-weight: 300;
+				@include gradient(270);
+				@include gradient-text;
+			}
+		}
+
+		&__subtitle {
+			font-family: Geometria-ExtraLight;
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 30px;
+			max-width: 428px;
+			margin-bottom: 40px;
+		}
+
+		&__form {
+			display: flex;
+			flex-direction: column;
+			max-width: 436px;
+
+			input {
+				background-color: transparent;
+				border: none;
+				padding: 20px 0;
+				border-bottom: 1px solid rgba($color: #000000, $alpha: .2);
+				transition-property: border-bottom;
+				transition-duration: 0.5s;
+				transition-timing-function: ease;
+
+				&:hover {
+					border-bottom: 1px solid #000;
+				}
+			}
+		}
+
+		input+input {
+			margin-top: 20px;
+			margin-bottom: 60px;
+		}
+
+
+		&__subtext {
+			max-width: 289px;
+			font-family: Geometria - ExtraLight;
+			font-size: 12px;
+			font-weight: 600;
+			line-height: 20px;
+		}
+
+		&__circle::before {
+			content: url(../img/envelope.png);
+			position: absolute;
+			top: calc(50% - 10px);
+			left: calc(50% - 9px);
+		}
+	}
+}

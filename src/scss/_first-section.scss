@@ -1,0 +1,57 @@
+.preview-section {
+
+	.central-text {
+		position: relative;
+		align-self: center;
+		display: flex;
+		flex-wrap: wrap;
+
+
+		&__title {
+			color: $orange;
+			font-size: 200px;
+			font-weight: 600;
+			margin-left: 10px;
+			width: 100%;
+			max-height: 230px;
+			@include gradient(180);
+			@include gradient-text;
+		}
+
+		&__subtitle {
+			color: $orange;
+			font-size: 24px;
+			transform: rotate(-90deg);
+			position: absolute;
+			top: 110px;
+			left: -60px;
+			@include gradient(180);
+			@include gradient-text;
+		}
+
+		&__circle {
+			top: 0;
+			left: 0;
+			position: relative;
+			@include plus(20px, 2px, #fff);
+			@include center(20px, 2px);
+			@include gradient(180);
+			transition-property: box-shadow;
+			transition-duration: 0.5s;
+			transition-timing-function: ease;
+
+			&:hover {
+				-moz-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.65);
+				box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.65);
+			}
+		}
+
+		&__text {
+			max-width: 400px;
+			font-size: 20px;
+			font-weight: 300;
+			line-height: 30px;
+			margin-left: 30px;
+		}
+	}
+}

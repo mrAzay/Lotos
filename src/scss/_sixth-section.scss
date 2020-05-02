@@ -1,0 +1,96 @@
+.table-section {
+	.container {
+		display: grid;
+		background-color: #fbf5f4;
+		height: 100%;
+		grid-template-areas:
+			"menu girl  section-title phone"
+			"lotos-logo text text number-page"
+			"social  social next-page next-page";
+		padding: 3%;
+	}
+
+	.central-text {
+
+		& table {
+			width: 100%;
+			height: 100%;
+		}
+
+		& td {
+			background-color: #fff;
+			text-align: center;
+			width: 201px;
+		}
+
+		&__downoload {
+			position: relative;
+			transition-property: background-color;
+			transition-duration: 0.5s;
+			transition-timing-function: ease;
+
+			&:hover {
+
+				background-color: $orange;
+				a{
+					color: #fff;
+				}
+				.central-text__downoload-circle {
+					background-size: 0;
+					background-color: $pink;
+				}
+			}
+
+			a {
+				@include link(#010101);
+				display: block;
+				height: 100%;
+			}
+
+			&-circle {
+				position: absolute;
+				top: calc(50% - 15px);
+				left: 30px;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				@include gradient(180);
+
+				&::before {
+					content: url(../img/down-arrow.png);
+					position: absolute;
+					top: calc(50% - 10px);
+					left: calc(50% - 4px);
+				}
+			}
+
+			&-text {
+				font-family: Geometria-ExtraLight;
+				font-size: 14px;
+				font-weight: 600;
+				width: auto;
+				max-width: 81px;
+				text-align: left;
+				margin-left: auto;
+				margin-right: 40px;
+				display: flex;
+				align-items: center;
+				height: 100%;
+			}
+		}
+
+		&__time,
+		&__day {
+			font-family: Geometria-Bold;
+			color: #f78e6a;
+			font-size: 14px;
+			font-weight: 700;
+		}
+
+		&__name {
+			font-family: Geometria-ExtraLight;
+			font-size: 14px;
+			font-weight: 600;
+		}
+	}
+}

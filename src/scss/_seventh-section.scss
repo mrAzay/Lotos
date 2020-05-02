@@ -1,0 +1,54 @@
+.reviews-section {
+
+	.tab--active.reviews__tab::before {
+		content: 'Client —';
+		left: -80px;
+	}
+
+	.girl img {
+		margin-right: 60px;
+	}
+
+	.central-text {
+		&__author {
+			display: flex;
+			margin-bottom: 20px;
+		}
+
+		&__author-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			margin-left: 40px;
+			line-height: 24px;
+		}
+
+		&__img img{
+			max-width: 100%;
+			width: 180px;
+			height: 180px;
+			object-fit: cover;
+		}
+		&__name {
+			color: #010101;
+			font-size: 30px;
+
+		}
+
+		&__age {
+			margin-top: 15px;
+		}
+
+		&__reviews {
+			max-width: 487px;
+			font-family: Geometria-ExtraLight;
+			font-weight: 600;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+		&__circle{
+			@include plus(2px, 16px, #fff);
+			@include center(2px, 16px);
+		}
+	}
+}

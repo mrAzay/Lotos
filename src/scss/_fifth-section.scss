@@ -1,0 +1,135 @@
+.subscription-section {
+	.central-text {
+		margin-top: 60px;
+
+		&__items {
+			display: grid;
+			grid-template-columns: 280px 280px;
+			grid-template-rows: 140px 140px 140px;
+			grid-gap: 4px;
+		}
+
+		&__item {
+			background-color: #fff;
+			cursor: pointer;
+
+			&-name,
+			&-price {
+				margin-left: 40px;
+			}
+
+			&-name {
+				margin-top: 40px;
+				margin-bottom: 23px;
+				font-family: Geometria-ExtraLight;
+				font-weight: 600;
+				line-height: 20px;
+			}
+
+			&-price {
+				span {
+					font-size: 24px;
+					font-weight: 700;
+					font-family: Geometria-Bold;
+					margin-right: 5px;
+					@include gradient(90);
+					@include gradient-text;
+				}
+			}
+		}
+
+		&__button {
+			margin-top: 60px;
+
+			&-text {
+				margin-left: 20px;
+			}
+		}
+
+		&__circle::before {
+			content: url(../img/checked.png);
+			position: absolute;
+			top: calc(50% - 12px);
+			left: calc(50% - 6px);
+		}
+	}
+
+	.central-text input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+		margin: 10px 0 0 7px;
+	}
+
+	.central-text__item-text {
+		position: relative;
+	}
+
+	//кружочек
+	.central-text__item-text:before {
+		content: '';
+		position: absolute;
+		top: calc(50% - 20px);
+		right: 20px;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: #fbf5f4;
+	}
+
+	//чек
+	.central-text__item-text:after {
+		content: '';
+		position: absolute;
+		top: calc(50% - 20px);
+		right: 20px;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		@include gradient(270);
+		opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+	}
+
+	.central-text__item-name {
+		@include plus(12px, 2px, #c9c4c3);
+
+		&::before {
+			top: calc(50% - 1px);
+			right: calc(40px - 6px);
+		}
+
+		&::after {
+			top: calc(50% - 6px);
+			right: calc(40px - 1px);
+		}
+	}
+
+	.central-text__item-price {
+		@include plus(12px, 2px, #fff);
+
+		&::before {
+			top: calc(50% - 1px);
+			right: calc(40px - 6px);
+			opacity: 0;
+		}
+
+		&::after {
+			top: calc(50% - 6px);
+			right: calc(40px - 1px);
+			opacity: 0;
+		}
+	}
+
+	.central-text input:checked+.central-text__item-text:after {
+		opacity: 1;
+	}
+
+	.central-text input:checked+.central-text__item-text>.central-text__item-price:before,
+	.central-text input:checked+.central-text__item-text>.central-text__item-price:after {
+		opacity: 1;
+		z-index: 2;
+	}
+}
