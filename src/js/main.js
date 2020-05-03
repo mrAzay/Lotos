@@ -110,4 +110,11 @@ popupButtonThree.addEventListener('click', e => {
 });
 
 
-
+document.addEventListener('keydown', e  =>{
+	
+	if (e.keyCode === 27) {
+		remove(popupOne);
+		remove(popupTwo);
+		remove(popupThree);
+	} 
+}); 

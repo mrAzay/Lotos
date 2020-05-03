@@ -102,10 +102,11 @@ li {
   left: 94px;
   top: 90px;
   z-index: 2;
-  transition-property: opacity, transform;
+  transition-property: opacity, transform, visibility;
   transition-duration: 0.5s;
   transition-timing-function: ease;
   opacity: 0;
+  visibility: hidden;
 
   li+li {
     margin-top: 20px;
@@ -120,13 +121,18 @@ li {
     opacity: 0.5;
     font-size: 16px;
     cursor: pointer;
+    &:hover{
+      opacity: 1;
+    }
   }
 
   &.showMenu {
+    visibility: visible;
     opacity: 1;
     transform: translateY(10px);
   }
 }
+
 
 .onanimation {
   .menu__links {
@@ -629,4 +635,9 @@ li {
     transform: translate(0, 540px);
 
   }
+}
+
+
+textarea {
+  resize: none;
 }
