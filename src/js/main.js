@@ -9,9 +9,6 @@ const menu = document.querySelectorAll('.menu');
 
 menuWrapper.forEach(item => {
 	item.addEventListener('click', (e) => {
-		// menu.forEach(item => {
-		// 	item.classList.toggle('show');
-		// });
 		document.querySelector('.menu__links').classList.toggle('showMenu');
 	});
 });

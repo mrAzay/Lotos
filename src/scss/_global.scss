@@ -34,11 +34,7 @@ li {
   background-color: #fbf5f4;
   height: 100vh;
   grid-template-columns: 15% 35% 35% 15%;
-  grid-template-rows: 10% 80% 10%;
-  grid-template-areas:
-    "menu girl  section-title phone"
-    "lotos-logo girl text number-page"
-    "social  girl next-page next-page";
+
   padding: 3%;
 }
 
